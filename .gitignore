@@ -1,0 +1,11 @@
+app/*/config/development
+app/*/logs/log-*.php
+app/!*/logs/index.html
+app/*/cache/*
+app/!*/cache/index.html
+app/!*/cache/.htaccess
+
+#codeigniter 3
+app/application/logs/*
+app/!application/logs/index.html
+app/!application/logs/.htaccess
