@@ -24,7 +24,7 @@
 		--><div id="login">
 			<h1>DFW FTW</h1>
 			<div class="subtitle">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit dolores, ullam ipsam officia repellat explicabo sunt aspernatur. Maxime ipsa architecto quisquam, enim praesentium ab expedita quis saepe officia explicabo quas.
+				The largest urban arts district in the United States. Enchanting, pristine forests. A blossoming tech industry. The DFW area has something for everyone to love. In this ever-expanding metropolitan area, there’s always new places to explore. Take our quiz to see why so many people have chosen to make DFW their home!
 			</div>
 			
 			<div id="gSignInWrapper">
