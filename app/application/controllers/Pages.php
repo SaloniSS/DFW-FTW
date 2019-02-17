@@ -39,8 +39,17 @@ class Pages extends CI_Controller {
 		$this->login();
 
 		$userAnswers = $this->db->get_where('question', ['user_id' => $this->user_id])->result()[0];
+		unset($userAnswers->user_id);
 
 		$this->data["answers"] = json_encode($userAnswers);
+
+		$this->data["texts"] = [];
+		foreach ($userAnswers as $key => $value) {
+			$x = $key . $value;
+
+			if (file_exists(VIEWPATH))
+			array_push($this->data["texts"], $x);
+		}
 
 		$this->data['head'] = $this->load->view('components/head', $this->data, TRUE);
 		$this->load->view('results', $this->data);

@@ -58,6 +58,8 @@
         </form>
     </div>
     <div id="map"></div>
+
+    <?php var_dump($texts) ?>
     
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmdEG7tAMN3rg2t5Wwxj25fEk86cxa8ZQ&callback=initMap"

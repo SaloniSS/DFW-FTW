@@ -20,6 +20,7 @@ class Data extends CI_Controller {
 			"sport2",
 			"sport3",
 			"sport4",
+			"sport5",
 			"music0",
 			"music1",
 			"transit",
