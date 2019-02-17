@@ -73,12 +73,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+$ci=& get_instance();
+$ci->load->helper(['file']);
+$file = read_file(BASEPATH . "../database_login.json");
+$data = json_decode($file);
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'hostname' => $data['hostname'],
+	'username' => $data['username'],
+	'password' => $data['password'],
+	'database' => $data['database'],
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
