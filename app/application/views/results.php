@@ -3,8 +3,9 @@
   <head>
     <title>DFW FTW</title>
     <meta name="viewport" content="initial-scale=1.0">
-    <?= style_link_tag('mapStyles') ?>
     <?= style_link_tag('main') ?>
+    <?= style_link_tag('mapStyles') ?>
+    <?= style_link_tag('slides') ?>
     <?= script_tag('coordinates') ?>
     <?= script_tag('code') ?>
     <?= script_tag('markerclusterer') ?>
@@ -63,8 +64,13 @@
 
     <div id="map"></div>
 
-    <?php var_dump($texts) ?>
-    
+    <div id="slides">
+        <?php foreach ($texts as $text): ?>
+        <div class="slide">
+            <?= $text ?>
+        </div>
+        <?php endforeach; ?>
+    </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmdEG7tAMN3rg2t5Wwxj25fEk86cxa8ZQ&callback=initMap"
     async defer></script>
