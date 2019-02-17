@@ -11,6 +11,24 @@ var categories = {
         array: artLocations,
         circleColor: "#f4ee42",
         radius: 1001
+    },
+    sport: {
+        icon: "http://maps.google.com/mapfiles/ms/icons/purple-pushpin.png",
+        array: sportLocations,
+        circleColor: "#8642f4",
+        radius: 1002
+    },
+    nature: {
+        icon: "http://maps.google.com/mapfiles/ms/icons/grn-pushpin.png",
+        array: natureLocations,
+        circleColor: "#44f429",
+        radius: 1003
+    },
+    music: {
+        icon: "http://maps.google.com/mapfiles/ms/icons/pink-pushpin.png",
+        array: musicLocations,
+        circleColor: "#f428ce",
+        radius: 1004
     }
 }
 
@@ -26,6 +44,9 @@ function initMap() {
     circles = [];
     addMarkers(categories.kids);
     addMarkers(categories.art);
+    addMarkers(categories.sport);
+    addMarkers(categories.nature);
+    addMarkers(categories.music);
     document.getElementById("kids").checked = true;
     markerCluster.resetViewport();
     infowindow = new google.maps.InfoWindow();
@@ -95,27 +116,4 @@ function showMarkers(type) {
     }
     markerCluster.resetViewport();
     console.log("show");
-}
-
-function test() {
-    var testCords = [
-        {lat: 32.7, lng: -97},
-        {lat: 33, lng: -97},
-        {lat: 34, lng: -96}
-    ];
-    
-    bermudaTriangle = new google.maps.Polygon({
-        paths: testCords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: '#FF0000',
-        fillOpacity: 0.35
-      });
-    bermudaTriangle.setMap(map);
-}
-
-function toggleHeatmap() {
-    markerCluster.setMap(markerCluster.getMap() ? null : map);
-    alert("hello");
 }

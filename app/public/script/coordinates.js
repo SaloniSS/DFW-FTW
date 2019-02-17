@@ -38,5 +38,71 @@ var artLocations = [
     {lat:32.7882, lng:-96.8002, label: "Nasher Sculpture Center"},
     {lat:32.7882, lng:-96.8002, label: "Nasher Sculpture Center"},
     {lat:32.7905, lng:-96.8229, label: "Dallas Contemporary"},
-    {lat:32.947257, lng:-96.827711, label: "The Warehouse"}
+    {lat:32.947257, lng:-96.827711, label: "The Warehouse"},
+    {lat: 32.783737, lng: -96.770952, label: "500 X Gallery"},
+    {lat: 32.803559, lng: -96.780258, label: "Kirk Hopper Fine Art Gallery "},
+    {lat: 32.7719, lng: -96.7898, label: "Ro2"},
+    {lat: 32.805525, lng: -96.802569, label: "Afterimage"},
+    {lat: 32.796613, lng: -96.803991, label: "David Dike"},
+    {lat: 32.791017, lng: -96.818605, label: "Barry Whistler"},
+    {lat: 32.792463, lng: -96.818244, label: "Carneal SImmons Contemporary"},
+    {lat: 32.787252, lng: -96.816834, label: "Craighead-Green"},
+    {lat: 32.7901, lng: -96.8221, label: "PDNB Gallery"},
+    {lat: 32.7230, lng: -97.4469, label: "Rebecca Low Gallery"},
+    {lat: 32.7486, lng: -97.3649, label: "Kimbell Art Museum"},
+    {lat: 32.7490, lng: -97.3630, label: "Modern Art Museum of Fort Worth"},
+    {lat: 32.7479, lng: -97.3684, label: "Amon Carter Museum of American Art"},
+    {lat: 32.7555, lng: -97.3316, label: "Sid Richardson Museum"},
+    {lat: 32.7468, lng: -97.3692, label: "Fort Worth Community Arts Center"},
+    {lat: 32.7540, lng: -97.3597, label: "Gallery 414"},
+    {lat: 32.7384, lng: -97.3946, label: "William Campbell Contemporary Art"},
+    {lat: 32.7369, lng: -97.1086, label: "Arlington Museum of Art"},
+    {lat: 32.731945, lng: -97.115059, label: "Gallery at the University of Texas at Arlington"},
+    {lat: 32.7355, lng: -97.1214, label: "The UpStairs Gallery"},
+    {lat: 32.8712, lng: -96.9673, label: "North Lake College"},
+    {lat: 32.8504, lng: -96.9606, label: "Irving Arts Center"},
+    {lat: 33.0210, lng: -96.7025, label: "ArtCentre of Plano"},
+    {lat: 33.101178, lng: -96.825334, label: "Texas Sculpture Garden"}
+]
+
+var sportLocations = [
+    {lat: 32.7905, lng: -96.8104, label: "American Airlines Center"},
+    {lat: 32.7795, lng: -96.7595, label: "Cotton Bowl Stadium"},
+    {lat: 33.1543, lng: -96.8352, label: "Toyota Stadium"},
+    {lat: 33.0984, lng: -96.8197, label: "Dr. Pepper Ballpark"},
+    {lat: 32.7512, lng: -97.0832, label: "Globe Life Park"},
+    {lat: 32.7473, lng: -97.0945, label: "AT&T Stadium"},
+    {lat: 32.789699, lng: -97.345338, label: "Stockyards Arena & The Stables"}
+]
+
+var natureLocations = [
+    {lat: 32.6383, lng: -96.9549, label: "Cedar Ridge Preserve"},
+    {lat: 32.7036, lng: -96.7053, label: "Trinity River Audubon Center"},
+    {lat: 32.802290, lng: -96.750939, label: "Santa Fe Trail"},
+    {lat: 32.919764, lng: -96.764983, label: "Cottonwood Trail"},
+    {lat: 32.7016, lng: -96.6999, label: "McCommas Bluff Preserve"},
+    {lat: 32.685427, lng: -96.958782, label: "Big Cedar on Prayer Mountain"},
+    {lat: 32.2534, lng: -97.8097, label: "Dinosaur Valley State Park"},
+    {lat: 32.1795, lng: -97.7972, label: "Fossil Rim Wildlife Center"},
+    {lat: 32.6135, lng: -96.9711, label: "Dogwood Canyon Audubon Center"},
+    {lat: 32.6195, lng: -96.9837, label: "Cedar Hill State Park"},
+    {lat: 33.1583, lng: -96.6157, label: "Heard Natural Science Museum & Wildlife Sanctuary"},
+    {lat: 33.2572, lng: -96.6544, label: "Erwin Park"},
+    {lat: 33.1867, lng: -96.6439, label: "Alex Clark Memorial Disc Golf Course"},
+    {lat: 32.7358, lng: -97.3664, label: "Fort Worth Japanese Garden"},
+    {lat: 32.8434, lng: -97.4773, label: "Fort Worth Nature Center and Refuge"},
+    {lat: 33.0879, lng: -96.5419, label: "Trinity Park"},
+    {lat: 33.0577, lng: -96.6713, label: "Oak Point Park and Nature Preserve"},
+    {lat: 33.0475, lng: -96.8487, label: "Arbor Hills Nature Center"},
+    {lat: 32.7901, lng: -97.1148, label: "River Legacy Park"},
+    {lat: 32.9821, lng: -97.1161, label: "Meadowmere Park"},
+    {lat: 32.906697, lng: -96.935224, label: "Campion Trail"}
+]
+
+var musicLocations = [
+    {lat: 32.7899, lng: -96.7986, label: "Meyerson Symphony Center"},
+    {lat: 32.7905, lng: -96.8104, label: "American Airlines Center"},
+    {lat: 32.7908, lng: -96.7975, label: "AT&T Performing Arts Center"},
+    {lat: 33.0195, lng: -96.7006, label: "McCall Plaza"},
+    {lat: 33.0833, lng: -96.8251, label: "Box Garden at Legacy Hall"}
 ]

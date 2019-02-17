@@ -11,9 +11,31 @@
   </head>
   <body>
     <div id="floating-panel">
-        <button onclick="hideMarkers('kids')">Toggle</button>
-        <form>
-            Kids<input type="checkbox" name="kids" id="kids" onchange="toggleCheckbox(this)"/>
+        <form style="padding:10px">
+            <div>
+            <img src="http://maps.google.com/mapfiles/ms/icons/ltblu-pushpin.png"/>
+            Kids<input type="checkbox" name="kids" id="kids" onchange="toggleCheckbox(this)"/><br>
+            </div>
+
+            <div>
+            <img src="http://maps.google.com/mapfiles/ms/icons/ylw-pushpin.png"/>
+            Art<input type="checkbox" name="art" id="art" onchange="toggleCheckbox(this)"/><br>
+            </div>
+
+            <div>
+            <img src="http://maps.google.com/mapfiles/ms/icons/purple-pushpin.png"/>
+            Sports<input type="checkbox" name="sport" id="sport" onchange="toggleCheckbox(this)"/><br>
+            </div>
+
+            <div>
+            <img src="http://maps.google.com/mapfiles/ms/icons/grn-pushpin.png"/>
+            Nature<input type="checkbox" name="nature" id="nature" onchange="toggleCheckbox(this)"/><br>
+            </div>
+
+            <div>
+            <img src="http://maps.google.com/mapfiles/ms/icons/pink-pushpin.png"/>
+            Music<input type="checkbox" name="music" id="music" onchange="toggleCheckbox(this)"/><br>
+            </div>
         </form>
     </div>
     <div id="map"></div>
