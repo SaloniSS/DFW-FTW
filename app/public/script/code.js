@@ -43,12 +43,15 @@ function initMap() {
     markerCluster = new MarkerClusterer(map);
     circles = [];
     addMarkers(categories.kids);
-    addMarkers(categories.art);
-    addMarkers(categories.sport);
-    addMarkers(categories.nature);
-    addMarkers(categories.music);
     document.getElementById("kids").checked = true;
+    addMarkers(categories.art);
     document.getElementById("art").checked = true;
+    addMarkers(categories.sport);
+    document.getElementById("sport").checked = true;
+    addMarkers(categories.nature);
+    document.getElementById("nature").checked = true;
+    addMarkers(categories.music);
+    document.getElementById("music").checked = true;
 
     transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(null);
@@ -97,6 +100,7 @@ function toggleCheckbox(checkboxElem) {
 }
 
 function hideMarkers(type) {
+    console.log(markerCluster);
     var markers = markerCluster.getMarkers();
     for (let i in markers) {
         if (markers[i].getIcon() === categories[type].icon)  markers[i].setMap(null);
@@ -116,6 +120,48 @@ function showMarkers(type) {
         if (circles[i].getRadius() === categories[type].radius) circles[i].setMap(map);
     }
     markerCluster.resetViewport();
+}
+
+function processData() {
+    var cities = {"Dallas": 0, "Fort Worth": 0, "Arlington": 0, "Plano": 0, "Irving": 0, "Grand Prairie": 0,
+        "McKinney": 0, "Frisco": 0, "Glen Rose": 0, "Cedar Hill": 0, "Grapevine": 0};
+    switch(answers.size) {
+        case '3':
+            cities["Dallas"] += 5;
+            cities["Fort Worth"] += 5;
+            break;
+        case '2':
+            cities["Arlington"] += 5;
+            cities["Plano"] += 5;
+            cities["Irving"] += 5;
+            break;
+        case '1':
+            cities["Frisco"] += 5;
+            cities["Gramd Prairie"] += 5;
+            cities["McKinney"] += 5;
+            break;
+        case '0':
+            cities["Grapevine"] += 5;
+            cities["Glen Rose"] += 5;
+            cities["Cedar Hill"] += 5;
+            break;
+    }
+    switch(answers.children) {
+    case '1':
+        cities["Dallas"] += 3;
+        cities["Fort Worth"] += 2;
+        cities["Arlington"] += 2;
+        cities["Grapevine"] += 2;
+        cities["Frisco"] += 1;
+        cities["Gramd Prairie"] += 1;
+        cities["McKinney"] += 1;
+        break;
+    case '0':
+        hideMarkers("kids");
+        document.getElementById("kids").checked = false;
+        break;
+    }
+    if (answers.art0 = '1') console.log("yes");
 }
 
 function toggleTransitMap() {

@@ -3,13 +3,6 @@
   <head>
     <title>DFW FTW</title>
     <meta name="viewport" content="initial-scale=1.0">
-    
-    <script type="text/javascript">
-        
-        var answers = <?= $answers ?>;
-
-    </script>
-
     <?= style_link_tag('mapStyles') ?>
     <?= style_link_tag('main') ?>
     <?= script_tag('coordinates') ?>
@@ -62,5 +55,9 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmdEG7tAMN3rg2t5Wwxj25fEk86cxa8ZQ&callback=initMap"
     async defer></script>
+    <script type="text/javascript">
+        var answers = <?= $answers ?>;
+        processData();
+    </script>
   </body>
 </html>
