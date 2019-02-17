@@ -1,2 +1,2 @@
-<h1>Child-Friendly</h1>
+<h1>Photography</h1>
 <img src="<?= asset('img/children1.jpg') ?>">
