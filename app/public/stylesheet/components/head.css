@@ -29,6 +29,7 @@
 #head .bar .left .appName {
   padding: 1rem 1rem 1rem 2rem;
   font-size: 2rem;
+  font-weight: 100;
   line-height: 2rem;
   letter-spacing: 0.25rem;
   cursor: default;

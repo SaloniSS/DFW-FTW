@@ -5,45 +5,45 @@ class Pages extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->CLIENT_ID = $this->config->item('login')->web->client_id;
-		$this->user_id = $this->session->user_id;
-		$this->user = $this->db->get_where('user', ['user_id' => $this->user_id])->result()[0];
+		$this->data = [];
 	}
 
-	private function exitIfNotLoggedIn() {
+	private function login() {
+		$this->user_id = $this->session->user_id;
 		if (!$this->user_id) {
 			header('Location: /');
+		} else {
+			$userQuery = $this->db->get_where('user', ['user_id' => $this->user_id]);
+			if ($userQuery) {
+				$this->user = $userQuery->result()[0];
+				$this->data["name"] = $this->user->name;
+			}
 		}
 	}
 
 	public function landing()
 	{
-		$data['google_signin_client_id'] = $this->CLIENT_ID;
-		$this->load->view('landing', $data);
+		$this->data['google_signin_client_id'] = $this->config->item('login')->web->client_id;
+		$this->load->view('landing', $this->data);
 	}
 
 	public function form() {
-		$this->exitIfNotLoggedIn();
-		$data = [];
+		$this->login();
 
-		$data['name'] = $this->user->name;
 
-		$data['head'] = $this->load->view('components/head', $data, TRUE);
-		$this->load->view('form', $data);
+		$this->data['head'] = $this->load->view('components/head', $this->data, TRUE);
+		$this->load->view('form', $this->data);
 	}
 
 	public function results() {
-		$this->exitIfNotLoggedIn();
-		$data = [];
+		$this->login();
 
-		$data['name'] = $this->user->name;
 
-		$data['head'] = $this->load->view('components/head', $data, TRUE);
-		$this->load->view('results', $data);
+		$this->data['head'] = $this->load->view('components/head', $this->data, TRUE);
+		$this->load->view('results', $this->data);
 	}
 
 	public function exit() {
-		$data = [];
-		$this->load->view('exit', $data);
+		$this->load->view('exit', $this->data);
 	}
 }
