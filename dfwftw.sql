@@ -2,8 +2,8 @@
 -- version 3.5.8.2
 -- http://www.phpmyadmin.net
 --
--- Host: sql213.byethost.com
--- Generation Time: Feb 17, 2019 at 07:56 AM
+-- Host: sql213.byetcluster.com
+-- Generation Time: Feb 17, 2019 at 09:26 AM
 -- Server version: 5.6.41-84.1
 -- PHP Version: 5.3.3
 
@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS `question` (
   `sport2` int(11) NOT NULL DEFAULT '0',
   `sport3` int(11) NOT NULL DEFAULT '0',
   `sport4` int(11) NOT NULL DEFAULT '0',
+  `sport5` int(11) NOT NULL DEFAULT '0',
   `music0` int(11) NOT NULL DEFAULT '0',
   `music1` int(11) NOT NULL DEFAULT '0',
   `transit` int(11) NOT NULL DEFAULT '0',

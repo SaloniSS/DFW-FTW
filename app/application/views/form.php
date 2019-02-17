@@ -53,6 +53,7 @@
 		<span><input type="checkbox" name="sport2" value="1"><label>Football</label></span>
 		<span><input type="checkbox" name="sport3" value="1"><label>Hockey</label></span>
 		<span><input type="checkbox" name="sport4" value="1"><label>Horseback Riding</label></span>
+		<span><input type="checkbox" name="sport5" value="1"><label>Basketball</label></span>
 	</span>
 
 
