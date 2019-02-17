@@ -39,6 +39,10 @@
 			font-size: 1.5rem;
 			background: black;
 			cursor: pointer;
+			transition: all 0.35s;
+		}
+		input[type=submit]:hover {
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 		}
 	}
 }

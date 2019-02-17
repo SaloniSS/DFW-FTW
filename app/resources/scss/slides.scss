@@ -1,0 +1,15 @@
+#slides {
+	width: 68rem;
+	margin: 0 auto;
+	margin-top: calc(100vh - 4rem);
+	padding: 4rem;
+	
+	.slide {
+		display: inline-block;
+		width: 28rem;
+		margin-right: 1.5rem;
+		img {
+			width: 100%;
+		}
+	}
+} 

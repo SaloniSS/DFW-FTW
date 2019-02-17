@@ -47,8 +47,10 @@ class Pages extends CI_Controller {
 		foreach ($userAnswers as $key => $value) {
 			$x = $key . $value;
 
-			if (file_exists(VIEWPATH))
-			array_push($this->data["texts"], $x);
+			if (file_exists(VIEWPATH . "text/" . $x . ".php"))
+			{
+				array_push($this->data["texts"], $this->load->view('text/' . $x, $this->data, TRUE));
+			}
 		}
 
 		$this->data['head'] = $this->load->view('components/head', $this->data, TRUE);
