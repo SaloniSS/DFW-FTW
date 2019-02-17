@@ -60,5 +60,7 @@ $route['exit'] = 'pages/exit';
 $route['logout'] = 'auth/logout';
 $route['login'] = 'auth/login';
 
+$route['store'] = 'data/store';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
