@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>DFW FTW</title>
 	<?= style_link_tag('main') ?>
 	<?= style_link_tag('exit') ?>
 </head>
@@ -17,5 +17,3 @@
 
 </body>
 </html>
-
-<!-- https://media.giphy.com/media/y18j1wxVZTWEM/giphy.gif -->

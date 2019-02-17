@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>DFW FTW</title>
 	<?= style_link_tag('main') ?>
 	<?= style_link_tag('landing') ?>
 	<script src="https://apis.google.com/js/api:client.js"></script>

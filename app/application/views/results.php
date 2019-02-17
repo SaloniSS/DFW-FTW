@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>DFW FTW</title>
     <meta name="viewport" content="initial-scale=1.0">
     <?= style_link_tag('mapStyles') ?>
     <?= style_link_tag('main') ?>
