@@ -1,0 +1,87 @@
+$rightWidth: 32rem;
+$leftBorderThickness: 4rem;
+$loginColor: #78002e;
+$frameColor: #ad1457;
+
+#landing {
+
+	main {
+
+		> * {
+			height: 100vh;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		#frame {
+			width: calc(100vw - #{$rightWidth});
+			padding: $leftBorderThickness;
+			margin: 0;
+			border: 0;
+			background-color: $frameColor;
+
+		}
+
+
+		#login {
+			width: $rightWidth;
+			background-color: $loginColor;
+			color: white;
+			padding: 4rem;
+
+			h1 {
+				font-weight: 100;
+				letter-spacing: 1rem;
+				text-align: center;
+				font-size: 6rem;
+				margin: 0;
+			}
+
+			.subtitle {
+				margin: 2rem 0;
+				opacity: 0.86;
+				text-align: center;
+				font-size: 1.25rem;
+			}
+
+			#gSignInWrapper {
+				#gSignIn {
+					border: solid 1rem white;
+					padding: 1rem;
+					text-align: center;
+					cursor: pointer;
+					text-transform: uppercase;
+					font-weight: 700;
+					letter-spacing: 0.25rem;
+					transition: all 0.35s;
+
+					> * {
+						vertical-align: middle;
+						padding-right: 1rem;
+					}
+
+					.icon {
+						display: inline-block;
+						font-size: 3rem;
+					}
+
+					.text {
+						display: inline-block;
+						font-size: 1.5rem;
+					}
+				}
+				#gSignIn:hover {
+					padding: 1rem;
+					text-align: center;
+					background-color: white;
+					color: $loginColor;
+					box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+				}
+			}
+		}
+
+	}
+
+	
+
+}

@@ -8,4 +8,4 @@ app/!*/cache/.htaccess
 #codeigniter 3
 app/application/logs/*
 app/!application/logs/index.html
-app/!application/logs/.htaccess
+client_secret.json

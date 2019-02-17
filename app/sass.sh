@@ -1,0 +1,1 @@
+sass --watch resources/scss:public/stylesheet

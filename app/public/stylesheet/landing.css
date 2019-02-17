@@ -1,0 +1,62 @@
+#landing main > * {
+  height: 100vh;
+  display: inline-block;
+  vertical-align: top;
+}
+#landing main #frame {
+  width: calc(100vw - 32rem);
+  padding: 4rem;
+  margin: 0;
+  border: 0;
+  background-color: #ad1457;
+}
+#landing main #login {
+  width: 32rem;
+  background-color: #78002e;
+  color: white;
+  padding: 4rem;
+}
+#landing main #login h1 {
+  font-weight: 100;
+  letter-spacing: 1rem;
+  text-align: center;
+  font-size: 6rem;
+  margin: 0;
+}
+#landing main #login .subtitle {
+  margin: 2rem 0;
+  opacity: 0.86;
+  text-align: center;
+  font-size: 1.25rem;
+}
+#landing main #login #gSignInWrapper #gSignIn {
+  border: solid 1rem white;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+  transition: all 0.35s;
+}
+#landing main #login #gSignInWrapper #gSignIn > * {
+  vertical-align: middle;
+  padding-right: 1rem;
+}
+#landing main #login #gSignInWrapper #gSignIn .icon {
+  display: inline-block;
+  font-size: 3rem;
+}
+#landing main #login #gSignInWrapper #gSignIn .text {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+#landing main #login #gSignInWrapper #gSignIn:hover {
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  color: #78002e;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/*# sourceMappingURL=landing.css.map */
