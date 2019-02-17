@@ -1,5 +1,4 @@
 <h1>Tech</h1>
-<p>
-	
+<p>Jobs Found are: Senior Software Engineer at AT&T, Senior Development, IT Applications at American Airlines, Data Scientist at State Farm
+, Engineering Intern at Axxess, Systems Engineer at Texas Instruments
 </p>
-<img src="https://www.gettyimages.com/gi-resources/images/CreativeLandingPage/HP_Sept_24_2018/CR3_GettyImages-159018836.jpg">
