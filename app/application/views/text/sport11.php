@@ -1,2 +1,2 @@
 <h1>Soccer</h1>
-<img src="<?= asset('img/children1.jpg') ?>">
+<img src="<?= asset('img/football.jpg') ?>">
