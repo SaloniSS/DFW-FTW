@@ -9,11 +9,8 @@
 	
 	<main>
 		<div id="content">
-			<div class="over">
-				<h1>Move to DFW</h1>
-				<h2><a href="/">Continue</a></h2>
-			</div>
-			<div class="back"></div>
+			<h1>Move to DFW</h1>
+			<h2><a href="/">Continue</a></h2>
 		</div>
 		<img id="circles" src="https://media.giphy.com/media/3o6ZtoGtJNCX8kfntm/giphy-downsized-large.gif">
 	</main>
