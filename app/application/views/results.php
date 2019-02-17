@@ -3,6 +3,10 @@
   <head>
     <title>DFW FTW</title>
     <meta name="viewport" content="initial-scale=1.0">
+    <script type="text/javascript">
+        var answers = <?= $answers ?>;
+    </script>
+    <?= style_link_tag('mapStyles') ?>
     <?= style_link_tag('main') ?>
     <?= style_link_tag('mapStyles') ?>
     <?= style_link_tag('slides') ?>
@@ -47,11 +51,10 @@
 
             <div>
             <img src="http://maps.google.com/mapfiles/ms/icons/bus.png"/>
-            Transit<input type="checkbox" onchange="toggleTransitMap()"/><br>
+            Transit<input type="checkbox" name="transit" id="transit" onchange="toggleTransitMap()"/><br>
             </div>
         </form>
 
-       
        <a class="back" href="/form"><i class="material-icons">arrow_back</i><span>Edit Preferences</span></a>
 
     </div>
@@ -70,9 +73,5 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmdEG7tAMN3rg2t5Wwxj25fEk86cxa8ZQ&callback=initMap"
     async defer></script>
-    <script type="text/javascript">
-        var answers = <?= $answers ?>;
-        processData();
-    </script>
   </body>
 </html>

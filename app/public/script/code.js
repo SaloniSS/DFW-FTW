@@ -58,6 +58,8 @@ function initMap() {
 
     markerCluster.resetViewport();
     infowindow = new google.maps.InfoWindow();
+
+    processData();
 }
 
 function addMarkers(type) {
@@ -100,7 +102,6 @@ function toggleCheckbox(checkboxElem) {
 }
 
 function hideMarkers(type) {
-    console.log(markerCluster);
     var markers = markerCluster.getMarkers();
     for (let i in markers) {
         if (markers[i].getIcon() === categories[type].icon)  markers[i].setMap(null);
@@ -146,8 +147,7 @@ function processData() {
             cities["Cedar Hill"] += 5;
             break;
     }
-    switch(answers.children) {
-    case '1':
+    if (answers.children == 1) {
         cities["Dallas"] += 3;
         cities["Fort Worth"] += 2;
         cities["Arlington"] += 2;
@@ -155,13 +155,102 @@ function processData() {
         cities["Frisco"] += 1;
         cities["Gramd Prairie"] += 1;
         cities["McKinney"] += 1;
-        break;
-    case '0':
+    } else {
         hideMarkers("kids");
         document.getElementById("kids").checked = false;
-        break;
     }
-    if (answers.art0 = '1') console.log("yes");
+    if (answers.art0 == 1) {
+        cities["Dallas"] += 3;
+        cities["Arlington"] += 2;
+        cities["Fort Worth"] += 3;
+    }
+    else if (answers.art1 == 1) {
+        cities["Dallas"] += 3;
+        cities["Arlington"] += 2;
+        cities["Fort Worth"] += 2;
+        cities["Plano"] += 1;
+    }
+    else if (answers.art2 == 1) {
+        cities["Dallas"] += 3;
+        cities["Fort Worth"] += 3;
+        cities["Irving"] += 2;
+    }
+    else if (answers.art3 == 1) {
+        cities["Dallas"] += 3;
+        cities["Arlington"] += 1;
+        cities["Fort Worth"] += 2;
+        cities["Frisco"] += 1;
+    }
+    else if (answers.art4 == 1) {
+        cities["Dallas"] += 3;
+        cities["Arlington"] += 1;
+        cities["Fort Worth"] += 2;
+    } else {
+        hideMarkers("art");
+        document.getElementById("art").checked = false;
+    }
+    if (answers.nature == 1) {
+        cities["Glen Rose"] += 3;
+        cities["Cedar Hill"] += 3;
+        cities["McKinney"] += 3;
+        cities["Arlington"] += 2;
+        cities["Grapevine"] += 2;
+        cities["Irving"] += 2;
+    } else {
+        hideMarkers("nature");
+        document.getElementById("nature").checked = false;
+    }
+    if (answers.sport0 == 1) {
+        cities["Arlington"] += 3;
+        cities["Frisco"] += 2;
+        cities["Dallas"] += 1;
+    }
+    else if (answers.sport1 == 1) {
+        cities["Frisco"] += 3;
+    }
+    else if (answers.sport2 == 1) {
+        cities["Arlington"] += 3;
+        cities["Dallas"] += 2;
+    }
+    else if (answers.sport3 == 1) {
+        cities["Dallas"] += 3;
+    }
+    else if (answers.sport4 == 1) {
+        cities["Forth Worth"] += 3;
+    }
+    else if (answers.sport5 == 1) {
+        cities["Dallas"] += 3;
+    } else {
+        hideMarkers("sport");
+        document.getElementById("sport").checked = false;
+    }
+    if (answers.music0 == 1) {
+        cities["Forth Worth"] += 3;
+        cities["Dallas"] += 2;
+        cities["Irving"] += 1;
+        cities["Plano"] += 1;
+        cities["Grand Prairie"] += 1;
+    }
+    else if (answers.music1 == 1) {
+        cities["Forth Worth"] += 2;
+        cities["Dallas"] += 3;
+        cities["Irving"] += 1;
+        cities["Plano"] += 2;
+        cities["Arlington"] += 2;
+        cities["Grand Prairie"] += 1;
+    } else {
+        hideMarkers("music");
+        document.getElementById("music").checked = false;
+    }
+    if (answers.transit == 1) {
+        console.log("called");
+        cities["Dallas"] += 3;
+        cities["Forth Worth"] += 2;
+        cities["Irving"] += 1;
+        cities["Grapevine"] += 1;
+        toggleTransitMap();
+        document.getElementById("transit").checked = true;
+    }
 }
 
 function toggleTransitMap() {
