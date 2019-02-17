@@ -49,7 +49,7 @@
 
 	<div class="aligncenter">
     		<h1> <font size="75" color="red" ><b>Stay in DFW !!!</b></font> </h1>
-    		<input class="Button" type="button" value="Start Over!!!" onclick="window.location.href='http://localhost:90'" />
+    		<input class="Button" type="button" value="Start Over!!!" onclick="window.location.href='/'" />
 
     	</div>
 	

@@ -8,6 +8,7 @@
 }
 #head .bar {
   position: fixed;
+  z-index: 99;
   background-color: black;
   color: white;
 }
@@ -19,10 +20,35 @@
 }
 #head .bar .left {
   left: 0;
+  padding: 0rem 2rem 0rem 2rem;
+}
+#head .bar .left > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+#head .bar .left .appName {
+  padding: 1rem 1rem 1rem 2rem;
   font-size: 2rem;
   line-height: 2rem;
   letter-spacing: 0.25rem;
-  padding: 1rem 2rem 1rem 4rem;
+  cursor: default;
+}
+#head .bar .left .appName::selection {
+  background-color: transparent;
+}
+#head .bar .left .separator {
+  background-color: white;
+  height: 3rem;
+  width: 0.125rem;
+}
+#head .bar .left .campaignName {
+  text-decoration: none;
+  height: 4rem;
+}
+#head .bar .left .campaignName img {
+  display: block;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  height: 4rem;
 }
 #head .bar .right {
   right: 0;

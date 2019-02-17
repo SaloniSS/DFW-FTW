@@ -11,6 +11,7 @@ $headHeight: 4rem;
 
 	.bar {
 		position: fixed;
+		z-index: 99;
 		background-color: black;
 		color: white;
 
@@ -23,10 +24,40 @@ $headHeight: 4rem;
 
 		.left {
 			left: 0;
-			font-size: 2rem;
-			line-height: 2rem;
-			letter-spacing: 0.25rem;
-			padding: 1rem 2rem 1rem 4rem;
+			padding: 0rem 2rem 0rem 2rem;
+			
+			> * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.appName {
+				padding: 1rem 1rem 1rem 2rem;
+				font-size: 2rem;
+				line-height: 2rem;
+				letter-spacing: 0.25rem;
+				cursor: default;
+			}
+
+			.appName::selection {
+				background-color: transparent;
+			}
+
+			.separator {
+				background-color: white;
+				height: 3rem;
+				width: 0.125rem;
+			}
+
+			.campaignName {
+				text-decoration: none;
+				height: 4rem;
+				img {
+					display: block;
+					padding: 0.5rem 2rem 0.5rem 1rem;
+					height: 4rem;
+				}
+			}
 		}
 
 		.right {

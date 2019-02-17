@@ -16,15 +16,23 @@ class Auth extends CI_Controller {
 			$client = new Google_Client();
 			$payload = $client->verifyIdToken($id_token);
 			if ($payload) {
-				$user_id = $payload['sub'];
-				$name = $payload['name'];
-				$email = $payload['email'];
-				$picture = $payload['picture'];
-				$this->session->set_userdata([
+				$data = [
 					"user_id" => $payload['sub'],
 					"name" => $payload['given_name'],
-					"email" => $payload['email'],
+					"email" => $payload['email']
+				];
+
+				$this->session->set_userdata([
+					"user_id" => $data["user_id"],
 				]);
+
+				$user = $this->db->get_where('user', ['user_id' => $data["user_id"]]);
+				if (!$user) {
+					$this->db->insert('user', $data);
+				} else {
+					$this->db->replace('user', $data);
+				}
+
 				header('Location: /form');
 			} else {
 				header('Location: /');

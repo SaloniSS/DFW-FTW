@@ -7,6 +7,7 @@ class Pages extends CI_Controller {
 		parent::__construct();
 		$this->CLIENT_ID = $this->config->item('login')->web->client_id;
 		$this->user_id = $this->session->user_id;
+		$this->user = $this->db->get_where('user', ['user_id' => $this->user_id])->result()[0];
 	}
 
 	private function exitIfNotLoggedIn() {
@@ -24,8 +25,8 @@ class Pages extends CI_Controller {
 	public function form() {
 		$this->exitIfNotLoggedIn();
 		$data = [];
-		
-		$data['name'] = $this->session->name;
+
+		$data['name'] = $this->user->name;
 
 		$data['head'] = $this->load->view('components/head', $data, TRUE);
 		$this->load->view('form', $data);
@@ -34,8 +35,8 @@ class Pages extends CI_Controller {
 	public function results() {
 		$this->exitIfNotLoggedIn();
 		$data = [];
-		
-		$data['name'] = $this->session->name;
+
+		$data['name'] = $this->user->name;
 
 		$data['head'] = $this->load->view('components/head', $data, TRUE);
 		$this->load->view('results', $data);

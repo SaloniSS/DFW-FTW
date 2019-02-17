@@ -4,12 +4,16 @@
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <?= style_link_tag('mapStyles') ?>
+    <?= style_link_tag('main') ?>
     <?= script_tag('coordinates') ?>
     <?= script_tag('code') ?>
     <?= script_tag('markerclusterer') ?>
     <meta charset="utf-8">
   </head>
-  <body>
+  <body id="results">
+    
+    <?= $head ?>
+
     <div id="floating-panel">
         <h1>Welcome to the Dallas-Forth Worth Area!</h1>
         <p>Based on your quiz results, we believe you are interested in the following. Feel free to change the selections.
@@ -47,6 +51,8 @@
         </form>
     </div>
     <div id="map"></div>
+    
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmdEG7tAMN3rg2t5Wwxj25fEk86cxa8ZQ&callback=initMap"
     async defer></script>
   </body>

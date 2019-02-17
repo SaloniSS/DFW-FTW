@@ -78,12 +78,13 @@ $ci->load->helper(['file']);
 $file = read_file(BASEPATH . "../database_login.json");
 $data = json_decode($file);
 
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => $data['hostname'],
-	'username' => $data['username'],
-	'password' => $data['password'],
-	'database' => $data['database'],
+	'hostname' => $data->hostname,
+	'username' => $data->username,
+	'password' => $data->password,
+	'database' => $data->database,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
