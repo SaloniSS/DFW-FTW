@@ -17,7 +17,14 @@ class Auth extends CI_Controller {
 			$payload = $client->verifyIdToken($id_token);
 			if ($payload) {
 				$user_id = $payload['sub'];
-				$this->session->set_userdata(['user_id' => $user_id]);
+				$name = $payload['name'];
+				$email = $payload['email'];
+				$picture = $payload['picture'];
+				$this->session->set_userdata([
+					"user_id" => $payload['sub'],
+					"name" => $payload['given_name'],
+					"email" => $payload['email'],
+				]);
 				header('Location: /form');
 			} else {
 				header('Location: /');

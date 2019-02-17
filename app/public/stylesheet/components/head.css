@@ -1,0 +1,51 @@
+#head {
+  width: 100vw;
+}
+#head > * {
+  display: block;
+  height: 4rem;
+  width: 100%;
+}
+#head .bar {
+  position: fixed;
+  background-color: black;
+  color: white;
+}
+#head .bar > * {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+#head .bar .left {
+  left: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 0.25rem;
+  padding: 1rem 2rem 1rem 4rem;
+}
+#head .bar .right {
+  right: 0;
+  padding: 0rem 4rem 0rem 2rem;
+}
+#head .bar .right > * {
+  display: inline-block;
+}
+#head .bar .right .welcome {
+  line-height: 1rem;
+  padding: 1.5rem 1rem;
+  font-weight: 100;
+}
+#head .bar .right .welcome .name {
+  font-weight: 400;
+}
+#head .bar .right .logout {
+  padding: 0.25rem 1rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=head.css.map */
