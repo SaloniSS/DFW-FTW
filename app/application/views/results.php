@@ -11,6 +11,9 @@
   </head>
   <body>
     <div id="floating-panel">
+        <h1>Welcome to the Dallas-Forth Worth Area!</h1>
+        <p>Based on your quiz results, we believe you are interested in the following. Feel free to change the selections.
+        Click on a pin to see what the attraction is.</p>
         <form style="padding:10px">
             <div>
             <img src="http://maps.google.com/mapfiles/ms/icons/ltblu-pushpin.png"/>
@@ -35,6 +38,11 @@
             <div>
             <img src="http://maps.google.com/mapfiles/ms/icons/pink-pushpin.png"/>
             Music<input type="checkbox" name="music" id="music" onchange="toggleCheckbox(this)"/><br>
+            </div>
+
+            <div>
+            <img src="http://maps.google.com/mapfiles/ms/icons/bus.png"/>
+            Transit<input type="checkbox" onchange="toggleTransitMap()"/><br>
             </div>
         </form>
     </div>

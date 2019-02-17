@@ -1,4 +1,4 @@
-var map, bermudaTriangle, markerCluster, circles, infowindow;
+var map, bermudaTriangle, markerCluster, circles, infowindow, transitLayer;
 var categories = {
     kids: {
         icon: "http://maps.google.com/mapfiles/ms/icons/ltblu-pushpin.png",
@@ -33,11 +33,11 @@ var categories = {
 }
 
 function initMap() {
-    var DFW = new google.maps.LatLng(32.8, -97);
+    var DFW = new google.maps.LatLng(32.9, -97);
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: DFW,
-        zoom: 11
+        zoom: 10
     });
 
     markerCluster = new MarkerClusterer(map);
@@ -48,6 +48,11 @@ function initMap() {
     addMarkers(categories.nature);
     addMarkers(categories.music);
     document.getElementById("kids").checked = true;
+    document.getElementById("art").checked = true;
+
+    transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(null);
+
     markerCluster.resetViewport();
     infowindow = new google.maps.InfoWindow();
 }
@@ -94,26 +99,25 @@ function toggleCheckbox(checkboxElem) {
 function hideMarkers(type) {
     var markers = markerCluster.getMarkers();
     for (let i in markers) {
-        if (markers[i].getIcon === type.icon) markers[i].setMap(null);
+        if (markers[i].getIcon() === categories[type].icon)  markers[i].setMap(null);
     }
     for (let i in circles) {
-        if (circles[i].getRadius() === categories[type].radius) {
-            console.log("remove");
-            markers[i].setMap(null);
-        }
+        if (circles[i].getRadius() === categories[type].radius) circles[i].setMap(null);
     }
     markerCluster.resetViewport();
-    console.log("hide");
 }
 
 function showMarkers(type) {
     var markers = markerCluster.getMarkers();
     for (let i in markers) {
-        if (markers[i].getIcon === type.icon) markers[i].setMap(map);
+        if (markers[i].getIcon() === categories[type].icon) markers[i].setMap(map);
     }
     for (let i in circles) {
-        if (circles[i].getRadius() === categories[type].radius) markers[i].setMap(map);
+        if (circles[i].getRadius() === categories[type].radius) circles[i].setMap(map);
     }
     markerCluster.resetViewport();
-    console.log("show");
+}
+
+function toggleTransitMap() {
+    transitLayer.setMap(transitLayer.getMap() ? null : map);
 }

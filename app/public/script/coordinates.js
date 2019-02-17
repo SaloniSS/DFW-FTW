@@ -104,5 +104,9 @@ var musicLocations = [
     {lat: 32.7905, lng: -96.8104, label: "American Airlines Center"},
     {lat: 32.7908, lng: -96.7975, label: "AT&T Performing Arts Center"},
     {lat: 33.0195, lng: -96.7006, label: "McCall Plaza"},
-    {lat: 33.0833, lng: -96.8251, label: "Box Garden at Legacy Hall"}
+    {lat: 33.0833, lng: -96.8251, label: "Box Garden at Legacy Hall"},
+    {lat: 32.7549, lng: -97.3301, label: "Bass Performance Hall"},
+    {lat: 32.7499, lng: -97.0853, label: "Texas Live!"},
+    {lat: 32.7668, lng: -96.9825, label: "Theater at Grand Prairie"},
+    {lat: 32.8735, lng: -96.9449, label: "Toyota Music Factory"}
 ]
