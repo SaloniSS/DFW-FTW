@@ -25,13 +25,14 @@ class Pages extends CI_Controller {
 		$this->exitIfNotLoggedIn();
 		$data = [];
 
+		$this->load->view('components/head', $data);
 		$this->load->view('form', $data);
 	}
 
 	public function results() {
 		$this->exitIfNotLoggedIn();
 		$data = [];
-
+		$this->load->view('components/head', $data);
 		$this->load->view('results', $data);
 	}
 
