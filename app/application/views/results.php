@@ -3,6 +3,13 @@
   <head>
     <title>DFW FTW</title>
     <meta name="viewport" content="initial-scale=1.0">
+    
+    <script type="text/javascript">
+        
+        var answers = <?= $answers ?>;
+
+    </script>
+
     <?= style_link_tag('mapStyles') ?>
     <?= style_link_tag('main') ?>
     <?= script_tag('coordinates') ?>

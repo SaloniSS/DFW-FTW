@@ -11,7 +11,7 @@
 <?= $head ?>
 
 
-<form id="mainForm" method="POST">
+<form id="mainForm" method="POST" action="store">
 
 	<h1>Tell us a little about yourself</h1>
 	

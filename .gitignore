@@ -9,5 +9,4 @@ app/!*/cache/.htaccess
 app/application/logs/*
 app/!application/logs/index.html
 client_secret.json
-database_login.json
 */application/vendor

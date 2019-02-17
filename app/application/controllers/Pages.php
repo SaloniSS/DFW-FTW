@@ -13,9 +13,9 @@ class Pages extends CI_Controller {
 		if (!$this->user_id) {
 			header('Location: /');
 		} else {
-			$userQuery = $this->db->get_where('user', ['user_id' => $this->user_id]);
+			$userQuery = $this->db->get_where('user', ['user_id' => $this->user_id])->result();
 			if ($userQuery) {
-				$this->user = $userQuery->result()[0];
+				$this->user = $userQuery[0];
 				$this->data["name"] = $this->user->name;
 			}
 		}
@@ -38,6 +38,9 @@ class Pages extends CI_Controller {
 	public function results() {
 		$this->login();
 
+		$userAnswers = $this->db->get_where('question', ['user_id' => $this->user_id])->result()[0];
+
+		$this->data["answers"] = json_encode($userAnswers);
 
 		$this->data['head'] = $this->load->view('components/head', $this->data, TRUE);
 		$this->load->view('results', $this->data);
