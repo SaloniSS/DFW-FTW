@@ -225,7 +225,7 @@ function processData() {
         cities["Dallas"] += 3;
     }
     else if (answers.sport4 == 1) {
-        cities["Forth Worth"] += 3;
+        cities["Fort Worth"] += 3;
     }
     else if (answers.sport5 == 1) {
         cities["Dallas"] += 3;
@@ -234,14 +234,14 @@ function processData() {
         document.getElementById("sport").checked = false;
     }
     if (answers.music0 == 1) {
-        cities["Forth Worth"] += 3;
+        cities["Fort Worth"] += 3;
         cities["Dallas"] += 2;
         cities["Irving"] += 1;
         cities["Plano"] += 1;
         cities["Grand Prairie"] += 1;
     }
     else if (answers.music1 == 1) {
-        cities["Forth Worth"] += 2;
+        cities["Fort Worth"] += 2;
         cities["Dallas"] += 3;
         cities["Irving"] += 1;
         cities["Plano"] += 2;
@@ -253,7 +253,7 @@ function processData() {
     }
     if (answers.transit == 1) {
         cities["Dallas"] += 3;
-        cities["Forth Worth"] += 2;
+        cities["Fort Worth"] += 2;
         cities["Irving"] += 1;
         cities["Grapevine"] += 1;
         toggleTransitMap();
@@ -271,7 +271,7 @@ function processData() {
                 num = cities[key];
                 topCity = key;
             }
-            // console.log(key + " -> " + cities[key]);
+            console.log(key + " -> " + cities[key]);
         }
     }
 }
