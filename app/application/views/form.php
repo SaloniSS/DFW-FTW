@@ -86,7 +86,7 @@
 		</select>
 	</span>
 	
-	<input type="submit" name="">
+	<input type="submit" name="" value="Next">
 
 </form>
 

@@ -51,13 +51,8 @@
             </div>
         </form>
 
-        <form style="padding:20px">
-            <div>
-            <input type="button" value="Go Back" onclick="window.location.href='/form'" />
-            </div>
-        </form>
-
-    
+       
+       <a class="back" href="/form"><i class="material-icons">arrow_back</i><span>Edit Preferences</span></a>
 
     </div>
 
@@ -65,6 +60,7 @@
     <div id="map"></div>
 
     <div id="slides">
+        <p>Based off of your responses, <b>[city]</b> is a match for your interests! Explore the map to see nearby attractions that match your interests in <b>[city]</b> and in the DFW area as a whole! We hope you decide to say Dall-yes!</p>
         <?php foreach ($texts as $text): ?>
         <div class="slide">
             <?= $text ?>
