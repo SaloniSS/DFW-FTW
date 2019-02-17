@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2ed4336d138d763440b87935dbb47c57
+class ComposerStaticInit52118f016a0bf9abb912a9ae52da36ed
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -86,13 +86,6 @@ class ComposerStaticInit2ed4336d138d763440b87935dbb47c57
     );
 
     public static $prefixesPsr0 = array (
-        'o' => 
-        array (
-            'org\\bovigo\\vfs' => 
-            array (
-                0 => __DIR__ . '/..' . '/mikey179/vfsStream/src/main/php',
-            ),
-        ),
         'G' => 
         array (
             'Google_Service_' => 
@@ -114,10 +107,10 @@ class ComposerStaticInit2ed4336d138d763440b87935dbb47c57
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit2ed4336d138d763440b87935dbb47c57::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit2ed4336d138d763440b87935dbb47c57::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit2ed4336d138d763440b87935dbb47c57::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit2ed4336d138d763440b87935dbb47c57::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit52118f016a0bf9abb912a9ae52da36ed::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit52118f016a0bf9abb912a9ae52da36ed::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit52118f016a0bf9abb912a9ae52da36ed::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit52118f016a0bf9abb912a9ae52da36ed::$classMap;
 
         }, null, ClassLoader::class);
     }
