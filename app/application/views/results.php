@@ -20,7 +20,7 @@
     <?= $head ?>
 
     <div id="floating-panel">
-        <h1>Welcome to the Dallas-Forth Worth Area!</h1>
+        <h1>Welcome to the Dallas-Fort Worth Area!</h1>
         <p>Based on your quiz results, we believe you are interested in the following. Feel free to change the selections.
         Click on a pin to see what the attraction is.</p>
         <form style="padding:10px">
