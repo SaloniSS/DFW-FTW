@@ -61,10 +61,10 @@
 #head .bar .right .welcome {
   line-height: 1rem;
   padding: 1.5rem 1rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 #head .bar .right .welcome .name {
-  font-weight: 400;
+  font-weight: 700;
 }
 #head .bar .right .logout {
   padding: 0.25rem 1rem;
