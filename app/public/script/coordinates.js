@@ -110,3 +110,12 @@ var musicLocations = [
     {lat: 32.7668, lng: -96.9825, label: "Theater at Grand Prairie"},
     {lat: 32.8735, lng: -96.9449, label: "Toyota Music Factory"}
 ]
+
+var techCompanies = [
+    {Position : "Senior Software Engineer" , Company : "AT&T" , Location : "Dallas" , Application : "https://www.att.jobs/job/dallas/senior-software-engineer-devsecops/117/10769980" , lat : 32.7767, lng : 96.7970, label : "AT&T Headquarters"},
+    {Position : "Senior Development, IT Applications" , Company : "American Airlines" , Location : "Fort Worth" , Application : "https://jobs.aa.com/job/Ft-Worth-DeveloperSenior-Developer%2C-IT-Applications-TX-76101/534724600/" , lat : 32.842998, lng : -96.981951, label : "American Airlines Headquarters"},
+    {Position : "Data Scientist" , Company : "State Farm" , Location : "Richardson" , Application : "https://www.statefarm.com/careers/become-an-employee/office-locations/dallas-office" , lat : 33.00001913 , lng : -96.701399 , label : "State Farm Office"},
+    {Position : "Engineering Intern" , Company : "Axxess" , Location : "Dallas" , Application : "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=153b5e8f-6e7c-4b07-a07b-70fec40037cb&ccId=19000101_000001&type=MP&lang=en_US" , lat : 32.967072, lng : -96.819990, label : "Axxess Office"},
+    {Position : "Systems Engineer" , Company : "Texas Instruments" , Location : "Dallas" , Application : "https://ti.taleo.net/careersection/ti_ex_standard/jobdetail.ftl?job=25780BR&tz=GMT-06%3A00" , lat : 32.911312, lng : -96.751672, label : "TI Office"}
+
+]

@@ -1,4 +1,5 @@
 var map, bermudaTriangle, markerCluster, circles, infowindow, transitLayer;
+var topCity = "Dallas";     // default value
 var categories = {
     kids: {
         icon: "http://maps.google.com/mapfiles/ms/icons/ltblu-pushpin.png",
@@ -29,6 +30,12 @@ var categories = {
         array: musicLocations,
         circleColor: "#f428ce",
         radius: 1004
+    },
+    tech: {
+        icon: "http://maps.google.com/mapfiles/ms/icons/flag.png",
+        array: techCompanies,
+        circleColor: "#edf3ff",
+        radius: 1005
     }
 }
 
@@ -52,6 +59,8 @@ function initMap() {
     document.getElementById("nature").checked = true;
     addMarkers(categories.music);
     document.getElementById("music").checked = true;
+    addMarkers(categories.tech);
+    document.getElementById("tech").checked = true;
 
     transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(null);
@@ -138,7 +147,7 @@ function processData() {
             break;
         case '1':
             cities["Frisco"] += 5;
-            cities["Gramd Prairie"] += 5;
+            cities["Grand Prairie"] += 5;
             cities["McKinney"] += 5;
             break;
         case '0':
@@ -153,7 +162,7 @@ function processData() {
         cities["Arlington"] += 2;
         cities["Grapevine"] += 2;
         cities["Frisco"] += 1;
-        cities["Gramd Prairie"] += 1;
+        cities["Grand Prairie"] += 1;
         cities["McKinney"] += 1;
     } else {
         hideMarkers("kids");
@@ -243,13 +252,27 @@ function processData() {
         document.getElementById("music").checked = false;
     }
     if (answers.transit == 1) {
-        console.log("called");
         cities["Dallas"] += 3;
         cities["Forth Worth"] += 2;
         cities["Irving"] += 1;
         cities["Grapevine"] += 1;
         toggleTransitMap();
         document.getElementById("transit").checked = true;
+    }
+    if (answers.industry != 0) {
+        hideMarkers("tech");
+        document.getElementById("tech").checked = false;
+    }
+
+    var num = 0;
+    for (var key in cities) {
+        if (cities.hasOwnProperty(key)) {
+            if (cities[key] > num) {
+                num = cities[key];
+                topCity = key;
+            }
+            // console.log(key + " -> " + cities[key]);
+        }
     }
 }
 
